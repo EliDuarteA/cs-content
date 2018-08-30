@@ -23,9 +23,9 @@ flow:
   name: deploy_tomcat
 
   inputs:
-    - hostname: "10.0.46.10"
-    - username: "capa1\\1033-capa1user"
-    - password: "Automation123"
+    - hostname:
+    - username:
+    - password:
     - image: "Ubuntu"
     - folder: "Students"
 
@@ -51,10 +51,10 @@ flow:
         do:
           vm.clone_virtual_machine:
            - host: '${hostname}'
-           - hostname: '10.0.44.8'
+           - hostname:
            - username: '${username}'
            - password: '${password}'
-           - clone_host: '10.0.44.8'
+           - clone_host:
            - clone_data_store: 'datastore2'
            - data_center_name: 'CAPA1 Datacenter'
            - is_template: 'false'
@@ -88,7 +88,7 @@ flow:
            - username: '${username}'
            - password: '${password}'
            - virtual_machine_name: '${id}'
-           - hostname: '10.0.44.8'
+           - hostname: ''
         publish:
           - details: '${return_result}'
         navigate:
@@ -110,8 +110,8 @@ flow:
         do:
           base.os.linux.samples.deploy_tomcat_on_ubuntu:
            - host: '${ip}'
-           - root_password: 'admin@123'
-           - user_password: 'admin@123'
+           - root_password: ''
+           - user_password: ''
            - java_version: "openjdk-7-jdk"
            - download_url: "http://www-us.apache.org/dist/tomcat/tomcat-8/v8.0.53/bin/apache-tomcat-8.0.53.tar.gz"
            - file_name: "apache-tomcat-8.0.53.tar.gz"
